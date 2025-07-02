@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZapTheBg.com - Remove image background instantly. Trusted by 1 Crore+ users. Fast, safe and 100% free." />
+  <meta name="keywords" content="remove background, background eraser, ZapTheBg, image editing online, remove bg tool" />
+  <meta name="author" content="ZapTheBg Team" />
+  <title>ZapTheBg.com - Remove Image Background Online</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebApplication",
+    "name": "ZapTheBg",
+    "url": "https://zapthebg.com",
+    "description": "Instantly remove image backgrounds with ZapTheBg. 100% safe and trusted by 1Cr+ users.",
+    "applicationCategory": "PhotoEditingApplication"
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+    }
+    header {
+      background-color: #0a74da;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .upload-area {
+      border: 2px dashed #ccc;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .upload-area input[type="file"] {
+      display: none;
+    }
+    .upload-area label {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #0a74da;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .result-area {
+      margin-top: 2rem;
+    }
+    .adsense {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: white;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .upload-area {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ZapTheBg.com</h1>
+    <p>100% Safe | Trusted by 1 Crore+ Users | Fast Background Remover</p>
+  </header>
+
+  <div class="container">
+    <h2>Remove Image Background Instantly</h2>
+    <p>Upload your photo and we'll remove the background automatically.</p>
+
+    <div class="upload-area">
+      <input type="file" id="imageUpload" accept="image/*">
+      <label for="imageUpload">Choose Image</label>
+      <p id="fileName"></p>
+    </div>
+
+    <!-- Google AdSense Placeholder -->
+    <div class="adsense">
+      <!-- Replace with your own AdSense code -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="result-area" id="resultArea">
+      <!-- Processed image will appear here -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 ZapTheBg.com | Privacy Protected | Fast & Free | Contact: support@zapthebg.com
+  </footer>
+
+  <!-- JavaScript for image handling -->
+  <script>
+    const imageUpload = document.getElementById('imageUpload');
+    const fileName = document.getElementById('fileName');
+    const resultArea = document.getElementById('resultArea');
+
+    imageUpload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        fileName.textContent = `Uploaded: ${file.name}`;
+        
+        // Preview (You can integrate real background removal API here)
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          resultArea.innerHTML = `<h3>Preview:</h3><img src="${e.target.result}" style="max-width:100%; border-radius:10px;">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>
